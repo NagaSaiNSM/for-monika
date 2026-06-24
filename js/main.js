@@ -73,7 +73,7 @@ function goToScene(sceneNumber){
     // Scene 4
     if(sceneNumber === 4){
 
-        startPetals();
+        // startPetals();
 
     }
 
@@ -212,7 +212,7 @@ document.addEventListener(
         "envelope-open"
         );
 
-        createPetalBurst();
+        // createPetalBurst();
 
         setTimeout(()=>{
 

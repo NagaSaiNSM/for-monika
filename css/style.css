@@ -93,6 +93,7 @@ body{
     box-shadow:
     0 0 25px rgba(255,255,255,.3);
 
+
 }
 
 .primary-btn:hover{
@@ -498,7 +499,7 @@ body{
 
     width:70%;
 
-    max-width:900px;
+    max-width:1000px;
 
     height:auto;
 
@@ -1252,7 +1253,7 @@ font-size:2rem;
 }
 #scene5 .primary-btn{
 
-    margin-top:8px;
+    margin-top:3px;
 
     padding:8px 22px;
 
@@ -2180,4 +2181,12 @@ background:rgba(0,0,0,0.5);
     text-align:center;
 
     padding:40px;
+}
+.primary-btn,
+button {
+
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
 }
