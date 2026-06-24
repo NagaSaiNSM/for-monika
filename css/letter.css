@@ -1,0 +1,287 @@
+/* ================================= */
+/* ENVELOPE OPEN ANIMATION */
+/* ================================= */
+
+.envelope-open{
+
+    animation:
+    openEnvelope 1.5s ease forwards;
+
+}
+
+@keyframes openEnvelope{
+
+    from{
+
+        transform:
+        scale(1);
+
+    }
+
+    to{
+
+        transform:
+        scale(1.15);
+
+    }
+
+}
+
+/* ================================= */
+/* LETTER APPEAR */
+/* ================================= */
+
+.letter-show{
+
+    animation:
+    revealLetter 2s ease forwards;
+
+}
+
+@keyframes revealLetter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(100px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+#typedLetter{
+    white-space:pre-wrap;
+}
+/* ================================= */
+/* PAPER EFFECT */
+/* ================================= */
+
+
+.letter-page{
+
+    flex:1;
+
+    padding:35px;
+
+    background:
+    rgba(255,255,255,.25);
+
+    border-radius:20px;
+
+    overflow:auto;
+    scroll-behavior: auto;
+
+}
+
+/* ================================= */
+/* PAPER TEXTURE */
+/* ================================= */
+
+.letter-paper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+    transparent,
+    transparent 24px,
+    rgba(0,0,0,.02) 25px
+    );
+
+    pointer-events:none;
+
+}
+
+/* ================================= */
+/* GLOW */
+/* ================================= */
+
+.letter-paper:hover{
+
+    box-shadow:
+    0 0 80px rgba(255,255,255,.35);
+
+}
+
+/* ================================= */
+/* CURSIVE TEXT */
+/* ================================= */
+
+.letter-content{
+
+    font-family:
+    'Caveat',
+    cursive;
+
+    font-size:2rem;
+
+    line-height:1.8;
+
+}
+#typedLetterPage1,
+#typedLetterPage2{
+
+    white-space:pre-wrap;
+    
+    /* font-family:'Dancing Script',cursive; */
+    /* font-family: 'Great Vibes', cursive; */
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+
+
+    font-size:1.15rem;
+
+    line-height:1.6;
+    text-align:left;
+
+    color:#3d2a1e;
+
+}
+.letter-page h2{
+
+    /* font-family:'Dancing Script',cursive; */
+    font-family: "Lilita One", sans-serif;
+font-weight: 400;
+    font-size:1.6rem;
+
+    color:#7b4a33;  
+
+    margin-bottom:20px;
+
+}
+
+
+/* ================================= */
+/* WAX SEAL */
+/* ================================= */
+
+.seal{
+
+    box-shadow:
+    0 0 20px rgba(178,30,53,.7);
+
+}
+
+/* ================================= */
+/* MAGIC SPARKLES */
+/* ================================= */
+
+.sparkle{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 10px white;
+
+    animation:
+    sparkleAnim 2s infinite;
+
+}
+
+@keyframes sparkleAnim{
+
+    50%{
+
+        transform:
+        scale(2);
+
+        opacity:.4;
+
+    }
+
+}
+
+.letter-paper{
+
+    width:96vw;
+    height:92vh;
+
+    display:flex;
+
+    gap:25px;
+
+    padding:25px;
+
+    background:#f8f4ea;
+
+    border-radius:25px;
+
+    color:#222;
+
+    box-shadow:
+    0 0 120px rgba(255,255,255,.25);
+
+}
+@keyframes letterRise{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(80px)
+        scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+.letter-fullscreen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+.typing-cursor{
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
+
+}

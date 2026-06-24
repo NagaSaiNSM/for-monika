@@ -1,0 +1,183 @@
+/* ================================= */
+/* STAR CONTAINER */
+/* ================================= */
+
+#stars-container{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+/* ================================= */
+/* STARS */
+/* ================================= */
+
+.star{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:
+    twinkle linear infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:.2;
+    }
+
+}
+
+/* ================================= */
+/* LARGE STARS */
+/* ================================= */
+
+.big-star{
+
+    width:4px;
+    height:4px;
+
+    box-shadow:
+    0 0 15px white,
+    0 0 30px white;
+
+}
+
+/* ================================= */
+/* SMALL STARS */
+/* ================================= */
+
+.small-star{
+
+    width:2px;
+    height:2px;
+
+}
+
+/* ================================= */
+/* SHOOTING STAR */
+/* ================================= */
+
+.shooting-star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 20px white;
+
+}
+
+.shooting-star::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+
+    height:2px;
+
+    background:
+    linear-gradient(
+    90deg,
+    white,
+    transparent
+    );
+
+    transform:
+    rotate(0deg);
+
+}
+
+@keyframes shooting{
+
+    from{
+
+        transform:
+        translate(0,0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translate(-1000px,500px);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ================================= */
+/* GALAXY GLOW */
+/* ================================= */
+
+.galaxy-glow{
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,255,255,.15),
+    transparent
+    );
+
+    filter:blur(80px);
+
+    animation:
+    galaxyMove 20s ease-in-out infinite alternate;
+
+}
+
+@keyframes galaxyMove{
+
+    from{
+        transform:
+        translateX(-100px);
+    }
+
+    to{
+        transform:
+        translateX(100px);
+    }
+
+}

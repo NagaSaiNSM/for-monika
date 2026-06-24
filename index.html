@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Monika ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="stylesheet" href="css/petals.css">
+    <link rel="stylesheet" href="css/letter.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+
+    <div id="stars-container"></div>
+
+    <div id="petal-container"></div>
+
+    <!-- Background Music -->
+
+    <audio id="bgMusic" loop>
+        <source src="assets/Finalbgm.mp3" type="audio/mpeg">
+    </audio>
+    <!-- ===================================== -->
+<!-- SCENE 0 : INTRO VIDEO -->
+<!-- ===================================== -->
+
+<section class="scene" id="scene0">
+
+<div class="intro-cover">
+
+    <p class="intro-top-line">
+        ✨ 26 June • A Day Worth Celebrating ✨
+    </p>
+
+    <h1 class="main-title">
+        Happy Birthday Monika ❤️
+    </h1>
+
+
+    <p class="subtitle">
+        Some people enter our lives quietly...
+        <br>
+        and somehow become the most beautiful part of it.
+    </p>
+
+    <p class="intro-note">
+        Today, I wanted to give you something
+        that could keep a few memories safe forever...
+    </p>
+    <button id="startVideoBtn" class="primary-btn">
+        Open Your Surprise ❤️
+    </button>
+
+</div>
+
+    <video
+        id="introVideo"
+        playsinline
+        style="display:none;">
+
+        <source
+        src="assets/Intro_Video.mp4"
+        type="video/mp4">
+
+    </video>
+
+    <div class="video-overlay">
+
+        <button
+            id="introContinueBtn"
+            class="primary-btn hidden"
+            onclick="startJourney()">
+
+            A Little More Surprise Awaits ❤️
+
+        </button>
+
+    </div>
+
+</section>
+    <!-- ===================================== -->
+    <!-- SCENE 1 : OPENING -->
+    <!-- ===================================== -->
+
+    <section class="scene" id="scene1">
+
+        <div class="overlay"></div>
+
+        <div class="hero-left">
+
+    <img
+    src="assets/couple-vespa.png"
+    class="hero-image">
+
+</div>
+
+<div class="hero-right">
+
+    <h1 class="main-title">
+        Happy Birthday Monika ❤️
+    </h1>
+
+    <p class="subtitle">
+
+        Thank you for making ordinary days
+        feel magical.
+
+    </p>
+
+    <button
+    class="primary-btn"
+    onclick="goToScene(2)">
+
+        Begin Journey ✨
+
+    </button>
+
+</div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- SCENE 2 : CONSTELLATION -->
+    <!-- ===================================== -->
+
+<section class="scene" id="scene2">
+
+    <canvas id="constellationCanvas"></canvas>
+
+    <div class="aurora"></div>
+
+    <!-- Constellation Backup Image -->
+
+    <img
+        id="constellationImage"
+        src="assets/monika-constellation.jpg"
+        alt="Monika Constellation">
+<!-- 
+    <img
+        src="assets/monika-vespa.png"
+        class="vespa-girl"> -->
+
+    <div class="golden-star"></div>
+
+    <div class="scene-content">
+
+        <h2 id="constellationLine1"></h2>
+
+        <p id="constellationLine2"></p>
+
+    </div>
+
+    <button class="primary-btn hidden" id="constellationBtn" onclick="goToScene(3)">
+        Let Me Tell You Why ❤️
+    </button>
+
+</section>
+
+    <!-- ===================================== -->
+    <!-- SCENE 3 : 26 REASONS -->
+    <!-- ===================================== -->
+
+    <section class="scene" id="scene3">
+
+        <div class="reasons-wrapper">
+
+            <h1>
+                25 Reasons Why You're Special
+            </h1>
+
+            <div id="reasonsContainer">
+
+            </div>
+
+        </div>
+
+        <button class="primary-btn" onclick="goToScene(4)">
+            Something else is waiting for you! ❤️
+        </button>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- SCENE 4 : LETTER -->
+    <!-- ===================================== -->
+
+    <section class="scene"  id="scene4">
+
+        <div id="envelopeContainer">
+
+            <div id="envelope">
+
+                <div class="seal">
+                    M
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="click-text">
+            A special letter for youu...
+        </p>
+
+        <div id="letterContainer">
+<div class="letter-paper">
+
+    <div class="letter-page">
+
+        <h2>
+            Happy Birthday, My Dear Monika ❤️
+        </h2>
+
+        <div id="typedLetterPage1"></div>
+
+    </div>
+
+    <div class="letter-page">
+
+        <h2>
+            ...
+        </h2>
+
+        <div id="typedLetterPage2"></div>
+
+    </div>
+
+</div>
+
+        <button class="primary-btn hidden" id="letterNextBtn" onclick="goToScene(5)">
+            Watch Something Special 🎥
+        </button>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- SCENE 5 : VIDEO -->
+    <!-- ===================================== -->
+
+    <section class="scene active" id="scene5">
+
+        <h1>
+            Here you go....More wishes for youu
+        </h1>
+
+        <div class="video-slider">
+
+
+    <button class="video-nav left" onclick="prevVideo()">
+        ❮
+    </button>
+
+    <div class="video-wrapper">
+
+        <video id="birthdayVideo" controls>
+            <source src="assets/video1.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-counter">
+            <span id="videoIndex">1</span> / 5
+        </div>
+
+    </div>
+
+    <button class="video-nav right" onclick="nextVideo()">
+        ❯
+    </button>
+
+</div>
+
+        <button class="primary-btn" onclick="goToScene('5b')">
+            Continue ❤️
+        </button>
+
+    </section>
+    <section class="scene " id="scene5b">
+
+    <div class="memory-video-container">
+
+        <h1 class="memory-subtitle">
+            Every memory with you became a story worth keeping forever ❤️...
+        </h1>
+
+        <video
+        id="journeyVideo"
+        controls>
+
+            <source
+            src="assets/Memories_Video.mp4"
+            type="video/mp4">
+
+        </video>
+
+        <button
+        class="primary-btn"
+        onclick="goToScene(6)">
+            Click here if your loved this ❤️
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- ===================================== -->
+    <!-- SCENE 6 : BACKPACK HINT -->
+    <!-- ===================================== -->
+<section class="scene" id="scene6">
+
+    <div class="final-overlay"></div>
+
+    <div class="moon-glow"></div>
+
+    <div class="gift-message final-message">
+
+        <h2 class="final-line">
+            The Website Was Never The Gift...
+        </h2>
+
+        <p class="final-line">
+            Look inside the backpack.
+        </p>
+
+        <p class="final-line">
+            A piece of our story is waiting there.
+        </p>
+
+        <div class="heart-divider">
+            ❤️❤️❤️❤️
+        </div>
+
+        <h1 class="final-wish">
+            Happy Birthday Monika
+        </h1>
+
+        <h3 class="final-subtitle">
+            Once again wishing you many more happy returns of the day ❤️
+        </h3>
+
+        <p class="signature">
+            — Sai
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- Scripts -->
+
+    <script src="js/main.js"></script>
+    <script src="js/reasons.js"></script>
+    <script src="js/petals.js"></script>
+   <!-- <script src="js/constellation.js"></script>-->
+    <script src="js/video.js"></script>
+
+</body>
+
+</html>
