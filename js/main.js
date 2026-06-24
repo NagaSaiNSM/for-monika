@@ -213,6 +213,7 @@ document.addEventListener(
         );
 
         // createPetalBurst();
+
         setTimeout(()=>{
 
             document
